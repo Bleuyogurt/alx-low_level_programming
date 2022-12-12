@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Description - Program checks the value for variable 'n'
- * Return (0) Success
+ *main - Entry point
+ *Description - This program checks the last digit of the value
+ *stored in the variable 'n'
+ *Return: (0) Success
  */
-
 int main(void)
 {
 	int n, last;
@@ -17,9 +17,9 @@ int main(void)
 	last = n % 10;
 	if (last > 5)
 		printf("Last digit of %d is %d and is greater than 5\n", n, last);
-	else if (last == 0)
-		printf("Last digit of %d is %d and is 0\n", n, last);
-	else if (last < 6)
+	else if (last < 6 && last != 0)
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last);
+	else
+		printf("Last digit of %d is %d and is 0\n", n, last);
 	return (0);
 }
